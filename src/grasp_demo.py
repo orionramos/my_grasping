@@ -45,7 +45,9 @@ hand_group.set_named_target("open")
 # put the arm at the 1st grasping position
 pose_target = geometry_msgs.msg.Pose()
 pose_target.orientation.w = 1.0
-pose_target.position.z = 1
+pose_target.position.x = 0.101
+pose_target.position.y = 0.27
+pose_target.position.z = 0.2
 arm_group.set_pose_target(pose_target)
 plan = arm_group.go(wait=True)
 # Calling `stop()` ensures that there is no residual movement
